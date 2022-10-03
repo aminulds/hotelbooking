@@ -1,12 +1,12 @@
 .nav {
    background-color: $color_primary;
+   padding: 15px 0;
 
    .container {
       .navWrap {
          display: flex;
          align-items: center;
          justify-content: space-between;
-         padding: 15px 0;
 
          .navbar-brand {
             .nav-link {
