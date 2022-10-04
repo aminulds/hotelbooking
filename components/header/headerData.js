@@ -3,7 +3,7 @@ import { IoAirplane } from 'react-icons/io';
 import { FaCarAlt } from 'react-icons/fa';
 
 
-export const headerData = [
+export const navbarData = [
     {
         text: 'Stays',
         icon: <MdLocalHotel />,

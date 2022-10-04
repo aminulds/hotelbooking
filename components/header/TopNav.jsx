@@ -15,8 +15,8 @@ const TopNav = () => {
         </Link>
       </div>
       <ul className='navbar-nav'>
-        <li className='nav-item'><Link href='/signup'><a className='nav-link'>Register <BiUser /></a></Link></li>
-        <li className='nav-item'><Link href='/login'><a className='nav-link'>Login <BiLogIn /></a></Link></li>
+        <li className='nav-item'><Link href='/signup'><a className='nav-link'><span className='d-none d-sm-block'>Register</span> <BiUser /></a></Link></li>
+        <li className='nav-item'><Link href='/login'><a className='nav-link'><span className='d-none d-sm-block'>Login</span> <BiLogIn /></a></Link></li>
       </ul>
     </div>
   )

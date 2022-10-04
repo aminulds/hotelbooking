@@ -1,0 +1,30 @@
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding: 0;
+
+    .navbar-toggler{
+        &:focus{
+            box-shadow: none;
+        }
+        svg{
+            color: $color_white;
+            font-size: 24px;
+
+            &:focus{
+                outline: none;
+            }
+        }
+    }
+
+    .navbar-collapse{
+        &:focus-visible{
+            outline: none;
+        }
+    }
+
+    .show{
+        margin-top: 16px;
+    }
+}
