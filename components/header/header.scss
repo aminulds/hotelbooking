@@ -1,12 +1,31 @@
-@import './topNav';
-@import './navItem';
+@import './topNav.scss';
 @import './navbar.scss';
+@import './navItem.scss';
+@import './searchFilter.scss';
+
 
 .header {
     background-color: $color_primary;
     padding: 15px 0;
 
     .container {
-        
+        .header-description {
+            margin-top: 24px;
+
+            h2,
+            p {
+                color: $color_white;
+                text-align: center;
+            }
+
+            .title {
+                font-size: 40px;
+                margin-bottom: 12px;
+            }
+
+            p {
+                color: $color_border;
+            }
+        }
     }
 }

@@ -1,0 +1,44 @@
+.seachFiler{
+    background-color: $color_white;
+    border: $border_2;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 0;
+    border-radius: $radius_2;
+   
+    position: relative;
+    bottom: -40px;
+    width: 100%;
+
+    .searchItem{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 30px;
+        
+        .icon{
+            color: lightgray;
+            font-size: 24px;
+            margin-right: 8px;
+        }
+        .text{
+            color: lightgray;
+            cursor: pointer;
+        }
+
+        .searchInput{
+            border: none;
+
+            &:focus{
+                box-shadow: none;
+            }
+        }
+
+        .btnFilter{
+            background-color: $color_primary;
+            color: $color_white;
+            border-radius: $radius_1;
+        }
+    }
+}
