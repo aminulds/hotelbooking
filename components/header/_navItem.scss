@@ -1,0 +1,30 @@
+.nav-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 14px;
+    cursor: pointer;
+    border: 1px solid $color_primary;
+
+    &:not(:last-child){
+        margin-right: 6px;
+    }
+
+    .nav-link{
+        color: $color_white;
+    }
+
+    .text {
+        padding-left: 10px;
+    }
+
+    &:hover {
+        border: $border_1;
+        border-radius: $radius_1;
+    }
+}
+
+.active {
+    border: $border_1;
+    border-radius: $radius_1;
+}
