@@ -3,6 +3,7 @@ import { FaBed, FaCalendarAlt } from 'react-icons/fa';
 import { GiPerson } from 'react-icons/gi';
 import { DateRange } from 'react-date-range';
 import { format } from 'date-fns';
+
 import { useStateContext } from '../../context/ContextProvider';
 
 import 'react-date-range/dist/styles.css';
@@ -10,9 +11,19 @@ import 'react-date-range/dist/theme/default.css';
 
 
 const SearchFilter = () => {
-	const { openDateRange, setopenDateRange, date, setDate } = useStateContext();
+	const { openDateRange, setopenDateRange, date, setDate, openOption, setOpenOption, option, setOption } = useStateContext();
 
 	const handleOpenDateRange = () => setopenDateRange(!openDateRange);
+	const handleOpenOption = () => setOpenOption(!openOption);
+
+	const handleOption = ((name, action) => {
+		setOption((prev) => {
+			return {
+				...prev, [name]: action === 'i' ? option[name] + 1 : option[name] - 1,
+			}
+		})
+	});
+
 
 	return (
 		<div className='seachFiler'>
@@ -33,7 +44,33 @@ const SearchFilter = () => {
 			</div>
 			<div className="searchItem">
 				<GiPerson className='icon' />
-				<span className='text'>2 Adult 2 Children 1 Room</span>
+				<span onClick={handleOpenOption} className='text'>{`${option.adult} adult . ${option.children} children ${option.room}`}</span>
+				{openOption && <div className="options card border-0 shadow p-3 p-md-4">
+					<div className="optionItem">
+						<span>Adults</span>
+						<div className='ps-3 ps-md-5 optionGroup'>
+							<button disabled={option.adult <= 1} onClick={() => handleOption('adult', 'd')} type='button' className={`btn btnMinus ${option.adult <= 1 ? 'btnDisable' : ''}`}>-</button>
+							<span className='px-3'>{option.adult}</span>
+							<button disabled={option.adult >= 5} onClick={() => handleOption('adult', 'i')} type='button' className={`btn btnPlus ${option.adult >= 5 ? 'btnDisable' : ''}`}>+</button>
+						</div>
+					</div>
+					<div className="optionItem">
+						<span>Children</span>
+						<div className='ps-3 ps-md-5 optionGroup'>
+							<button disabled={option.children <= 0} onClick={() => handleOption('children', 'd')} type='button' className={`btn btnMinus ${option.children <= 0 ? 'btnDisable' : ''}`}>-</button>
+							<span className='px-3'>{option.children}</span>
+							<button disabled={option.children >= 5} onClick={() => handleOption('children', 'i')} type='button' className={`btn btnPlus ${option.children >= 5 ? 'btnDisable' : ''}`}>+</button>
+						</div>
+					</div>
+					<div className="optionItem">
+						<span>Room</span>
+						<div className='ps-3 ps-md-5 optionGroup'>
+							<button disabled={option.room <= 1} onClick={() => handleOption('room', 'd')} type='button' className={`btn btnMinus ${option.room <= 1 ? 'btnDisable' : ''}`}>-</button>
+							<span className='mx-3'>{option.room}</span>
+							<button disabled={option.room >= 5} onClick={() => handleOption('room', 'i')} type='button' className={`btn btnPlus ${option.room >= 5 ? 'btnDisable' : ''}`}>+</button>
+						</div>
+					</div>
+				</div>}
 			</div>
 			<div className="searchItem">
 				<button className='btn btnFilter'>Search</button>

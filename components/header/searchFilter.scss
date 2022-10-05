@@ -23,22 +23,71 @@
 			margin-right: 8px;
 		}
 
-		.text {
-			color: lightgray;
-			cursor: pointer;
-		}
-
-		.dateFilter {
-			position: absolute;
-			top: 50px;
-
-		}
-
 		.searchInput {
 			border: none;
 
 			&:focus {
 				box-shadow: none;
+			}
+		}
+
+		.text {
+			color: lightgray;
+			cursor: pointer;
+		}
+
+		.dateFilter,
+		.options {
+			transition: $transition;
+			position: absolute;
+			top: 53px;
+		}
+
+		.options {
+			transition: $transition;
+
+			.optionItem {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+
+				&:not(:last-child) {
+					margin-bottom: 16px;
+				}
+
+				.optionGroup {
+
+					.btnMinus,
+					.btnPlus {
+						transition: $transition;
+						font-weight: 600;
+					}
+
+					.btnMinus {
+						border-color: $color_danger;
+
+						&:hover {
+							color: $color_danger;
+						}
+					}
+					.btnPlus {
+						border-color: $color_success;
+
+						&:hover {
+							color: $color_success;
+						}
+					}
+
+					.btnDisable{
+						border-color: $color_disable;
+						color: $color_disable;
+						cursor: not-allowed;
+
+						&:hover{
+							color: $color_disable;
+						}
+					}
+				}
 			}
 		}
 
@@ -48,4 +97,5 @@
 			border-radius: $radius_1;
 		}
 	}
+
 }
