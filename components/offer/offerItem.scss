@@ -1,0 +1,15 @@
+.offerItem{
+  .itemImg{}
+  .itemBody{
+    position: relative;
+    bottom: 153px;
+    padding-left: 20px;
+    h4{
+      font-size: 20px;
+      color: $color_white;
+    }
+    p{
+      color: $color_gray2;
+    }
+  }
+}

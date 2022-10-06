@@ -8,6 +8,7 @@ import { useStateContext } from '../../context/ContextProvider';
 
 import 'react-date-range/dist/styles.css';
 import 'react-date-range/dist/theme/default.css';
+import Button from '../UI/Button';
 
 
 const SearchFilter = () => {
@@ -73,7 +74,7 @@ const SearchFilter = () => {
 				</div>}
 			</div>
 			<div className="searchItem">
-				<button className='btn btnFilter'>Search</button>
+				<Button type="search" text="Search" />
 			</div>
 		</div>
 	)

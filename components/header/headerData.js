@@ -1,5 +1,4 @@
 import { MdLocalHotel, MdFlight } from 'react-icons/md';
-import { IoAirplane } from 'react-icons/io';
 import { FaCarAlt } from 'react-icons/fa';
 
 

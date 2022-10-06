@@ -4,15 +4,15 @@ $color_white: #ffffff;
 $color_warning: #febb02;
 $color_danger: #DD5353;
 $color_success: #367E18;
-$color_border: #ffffff88;
-$color_disable: lightgray;
+$color_gray: #ffffff88;
+$color_gray2: lightgray;
 
 // Radius
 $radius_1: 4px;
 $radius_2: 8px;
 
 // Border
-$border_1: 1px solid $color_border;
+$border_1: 1px solid $color_gray;
 $border_2: 3px solid $color_warning;
 
 // Transition

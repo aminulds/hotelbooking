@@ -41,6 +41,7 @@
 			transition: $transition;
 			position: absolute;
 			top: 53px;
+			z-index: 1;
 		}
 
 		.options {
@@ -70,6 +71,7 @@
 							color: $color_danger;
 						}
 					}
+
 					.btnPlus {
 						border-color: $color_success;
 
@@ -78,23 +80,17 @@
 						}
 					}
 
-					.btnDisable{
-						border-color: $color_disable;
-						color: $color_disable;
+					.btnDisable {
+						border-color: $color_gray2;
+						color: $color_gray2;
 						cursor: not-allowed;
 
-						&:hover{
-							color: $color_disable;
+						&:hover {
+							color: $color_gray2;
 						}
 					}
 				}
 			}
-		}
-
-		.btnFilter {
-			background-color: $color_primary;
-			color: $color_white;
-			border-radius: $radius_1;
 		}
 	}
 

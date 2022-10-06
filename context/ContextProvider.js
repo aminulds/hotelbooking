@@ -14,7 +14,7 @@ export const ContextProvider = ({ children }) => {
   ]);
   const [openOption, setOpenOption] = useState(false);
   const [option, setOption] = useState({ adult: 2, children: 5, room: 1, });
-  const [filterSearch, setFilterSearch] = useState(false);
+  const [filterSearch, setFilterSearch] = useState(true);
 
   // State Share as variables
   const stateShare = {

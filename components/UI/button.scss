@@ -1,0 +1,12 @@
+.btnPrimary {
+  background-color: $color_primary;
+  color: $color_white;
+  border-radius: $radius_1;
+  transition: $transition;
+
+  &:hover, &:active {
+    background-color: $color_white !important;
+    color: $color_primary !important;
+    border-color: $color_primary !important;
+  }
+}

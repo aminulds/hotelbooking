@@ -20,4 +20,7 @@ body {
 
 
 // Import from Components
+// UI components
+@import '../components/UI/button.scss';
 @import '../components/header/header';
+@import '../components/offer//offer.scss';
