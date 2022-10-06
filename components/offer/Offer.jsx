@@ -7,7 +7,7 @@ const Offer = () => {
     <section className='offer'>
       <div className="container">
         <div className="sectionHeading">
-          <h2>Offers</h2>
+          <h3>Offers</h3>
           <p className='text-muted'>Promotions, deals, and special offers for you</p>
         </div>
         <div className="row row-cols-1 row-cols-md-2">

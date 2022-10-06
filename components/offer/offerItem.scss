@@ -1,14 +1,19 @@
-.offerItem{
-  .itemImg{}
-  .itemBody{
+.offerItem {
+  .itemImg {
+    border-radius: $radius_2;
+  }
+
+  .itemBody {
     position: relative;
     bottom: 153px;
     padding-left: 20px;
-    h4{
+
+    h4 {
       font-size: 20px;
       color: $color_white;
     }
-    p{
+
+    p {
       color: $color_gray2;
     }
   }
