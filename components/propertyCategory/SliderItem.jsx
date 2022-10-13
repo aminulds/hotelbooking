@@ -4,7 +4,7 @@ import React from 'react'
 const SliderItem = ({ type, amount, img }) => {
   return (
     <div className='card shadow'>
-      <Image className='card-img-top' src={img} layout='responsive' width={100} height={80} />
+      <Image className='card-img-top' src={img} width={300} height={240} />
       <div className='card-body'>
         <h5>{type}</h5>
         <p className='mb-0'>

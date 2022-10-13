@@ -11,7 +11,7 @@ const Offer = () => {
           <p className='text-muted'>Promotions, deals, and special offers for you</p>
         </div>
         <div className="row row-cols-1 row-cols-md-2">
-          {offerData.map((item) => <OfferItem title={item.title} descr={item.descr} btnText={item.btnText} img={item.img} />)}
+          {offerData.map((item) => <OfferItem key={item.title} title={item.title} descr={item.descr} btnText={item.btnText} img={item.img} />)}
         </div>
       </div>
     </section>

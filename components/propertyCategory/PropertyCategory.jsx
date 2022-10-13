@@ -18,7 +18,7 @@ const PropertyCategory = () => {
         <Swiper
           modules={[Autoplay]}
           spaceBetween={30}
-          slidesPerView={4}
+          slidesPerView={3}
           speed={1500}
           autoplay={{
             delay: 5000,
