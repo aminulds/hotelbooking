@@ -1,14 +1,21 @@
-.card {
+.slider_item {
   border: none;
   cursor: move;
 
   .card-body {
+    transition: $transition;
+
     h5 {
       text-transform: capitalize;
     }
 
     p {
       color: $color_text;
+    }
+
+    &:hover {
+      cursor: pointer;
+      background-color: $color_gray2;
     }
   }
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import Header from '../components/header/Header';
 import Offer from '../components/offer/Offer';
 import PropertyCategory from '../components/propertyCategory/PropertyCategory';
+import PropertyCountry from '../components/propertyCountry/PropertyCountry';
 
 const Home = () => {
   return (
@@ -9,6 +10,7 @@ const Home = () => {
       <Header />
       <Offer />
       <PropertyCategory />
+      <PropertyCountry />
     </>
   )
 }

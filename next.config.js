@@ -7,7 +7,7 @@ module.exports = nextConfig;
 
 module.exports = {
   images: {
-    domains: ['q-xx.bstatic.com', 'r-xx.bstatic.com'],
+    domains: ['q-xx.bstatic.com', 'r-xx.bstatic.com', 'cf.bstatic.com'],
   },
 }
 

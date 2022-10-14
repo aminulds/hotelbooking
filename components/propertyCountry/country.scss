@@ -1,0 +1,20 @@
+.col {
+  .country {
+    position: relative;
+
+    .location {
+      position: absolute;
+      top: 16px;
+      margin-left: 20px;
+      display: flex;
+
+      .name {
+        margin-bottom: 0;
+        margin-right: 8px;
+        color: $color_white;
+        font-weight: 600;
+      }
+    }
+
+  }
+}

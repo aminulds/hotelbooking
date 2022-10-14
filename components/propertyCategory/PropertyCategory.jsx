@@ -1,5 +1,5 @@
 import React from 'react';
-import { Pagination, Autoplay } from 'swiper';
+import { Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import 'swiper/css';
@@ -10,10 +10,11 @@ import { propertyCategoryData } from './propertyCategoryData';
 
 const PropertyCategory = () => {
   return (
-    <section className='propertyCategory'>
+    <section className='propertyCategory mb-4 mb-lg-5'>
       <div className="container">
-        <div className="sectionHeading">
-          <h3 className='mb-3'>Browse by property type</h3>
+        <div className="sectionHeading mb-4">
+          <h3>Travel with style</h3>
+          <p>Select an accommodation type to start browsing</p>
         </div>
         <Swiper
           modules={[Autoplay]}

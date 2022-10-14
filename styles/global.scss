@@ -22,6 +22,9 @@ body {
 // Import from Components
 // UI components
 @import '../components/UI/button.scss';
+
+// Section
 @import '../components/header/header';
 @import '../components/offer//offer.scss';
 @import '../components/propertyCategory/propertyCategory.scss';
+@import '../components/propertyCountry/propertyCountry.scss';
