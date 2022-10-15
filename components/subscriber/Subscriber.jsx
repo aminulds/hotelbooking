@@ -8,7 +8,7 @@ const Subscriber = () => {
         <div className="subscriber_wrap">
           <div className="title">
             <h4>Save time, save money!</h4>
-            <p>Sign up and we'll send the best deals to you</p>
+            <p>Sign up and we will send the best deals to you</p>
           </div>
           <form className="email">
             <input type="email" placeholder='Your Email' className='form-control' />

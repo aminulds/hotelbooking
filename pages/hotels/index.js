@@ -1,8 +1,10 @@
-import React from 'react'
+import Header from '../../components/header/Header';
 
 const Hotels = () => {
   return (
-    <div>Hotels</div>
+    <div className='hotels'>
+      <Header />
+    </div>
   )
 }
 

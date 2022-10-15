@@ -9,6 +9,7 @@ import { useStateContext } from '../../context/ContextProvider';
 import 'react-date-range/dist/styles.css';
 import 'react-date-range/dist/theme/default.css';
 import Button from '../UI/Button';
+import Link from 'next/link';
 
 
 const SearchFilter = () => {
@@ -74,7 +75,7 @@ const SearchFilter = () => {
 				</div>}
 			</div>
 			<div className="searchItem">
-				<Button type="search" text="Search" />
+				<Link href={'/hotels'}><a><Button type="search" text="Search" /></a></Link>
 			</div>
 		</div>
 	)

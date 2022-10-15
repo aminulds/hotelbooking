@@ -7,7 +7,7 @@ const FooterCol = () => {
     <div className='col'>
       <div className="col_wrap">
         {footerData.map((item) => (
-          <Link href={item.link}>
+          <Link key={item.text} href={item.link}>
             <a className='nav-link'>{item.text}</a>
           </Link>
         ))}
