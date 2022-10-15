@@ -1,0 +1,37 @@
+.subscriber {
+  background-color: $color_bg_primary;
+  padding: 48px 0;
+
+  .container {
+    .subscriber_wrap {
+      .title {
+        text-align: center;
+
+
+        h4 {
+          color: $color_white;
+        }
+
+        p {
+          color: $color_text;
+        }
+      }
+
+      .email {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .form-control {
+          width: auto;
+          margin-right: 16px;
+          box-shadow: none;
+
+          &:focus-visible {
+            outline: none;
+          }
+        }
+      }
+    }
+  }
+}
