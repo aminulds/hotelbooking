@@ -12,7 +12,6 @@ const Subscriber = () => {
           </div>
           <form className="email">
             <input type="email" placeholder='Your Email' className='form-control' />
-            {/* <input type="submit" value="Subscribe" className='btn btn_subscribe' /> */}
             <Button type='button' text='Subscribe' />
           </form>
         </div>

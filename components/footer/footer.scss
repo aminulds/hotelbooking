@@ -1,0 +1,11 @@
+@import './footerCol.scss';
+
+.footer {
+  padding: 48px 0;
+
+  .container {
+    .row {
+      justify-content: center;
+    }
+  }
+}

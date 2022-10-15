@@ -1,0 +1,11 @@
+.col {
+  .col_wrap {
+    .nav-link {
+      color: $color_primary;
+
+      &:hover {
+        font-weight: 600;
+      }
+    }
+  }
+}
