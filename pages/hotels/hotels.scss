@@ -1,0 +1,28 @@
+.hotels {
+  margin-top: 24px;
+
+  .container {
+    .row {
+      .seachFilter {
+        background-color: $color_warning;
+        position: sticky;
+        border-radius: $radius_2;
+
+        .checkDate {
+          cursor: pointer;
+        }
+
+        .optionItem {
+
+          label,
+          .form-control {
+            flex: 1;
+          }
+        }
+
+      }
+
+      .serachResult {}
+    }
+  }
+}

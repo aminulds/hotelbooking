@@ -5,6 +5,7 @@ const StateContext = createContext();
 export const ContextProvider = ({ children }) => {
   // Assign State
   const [openDateRange, setopenDateRange] = useState(false);
+  const [destination, setDestination] = useState("");
   const [date, setDate] = useState([
     {
       startDate: new Date(),
@@ -23,6 +24,7 @@ export const ContextProvider = ({ children }) => {
     openOption, setOpenOption,
     option, setOption,
     filterSearch, setFilterSearch,
+    destination, setDestination,
   }
 
   return (

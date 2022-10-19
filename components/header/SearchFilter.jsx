@@ -13,7 +13,7 @@ import Link from 'next/link';
 
 
 const SearchFilter = () => {
-	const { openDateRange, setopenDateRange, date, setDate, openOption, setOpenOption, option, setOption } = useStateContext();
+	const { destination, setDestination, openDateRange, setopenDateRange, date, setDate, openOption, setOpenOption, option, setOption } = useStateContext();
 
 	const handleOpenDateRange = () => setopenDateRange(!openDateRange);
 	const handleOpenOption = () => setOpenOption(!openOption);
@@ -26,12 +26,17 @@ const SearchFilter = () => {
 		})
 	});
 
+	const handleSearch = () => {
+		state: destination, date, option
+	}
+
 
 	return (
 		<div className='seachFiler'>
 			<div className="searchItem">
 				<FaBed className='icon' />
-				<input type="search" placeholder='Where are you going?' className='form-control searchInput' />
+				<input type="search" placeholder='Where are you going?' className='form-control searchInput'
+					onChange={e => setDestination(e.target.value)} />
 			</div>
 			<div className="searchItem">
 				<FaCalendarAlt className='icon' />
@@ -75,7 +80,7 @@ const SearchFilter = () => {
 				</div>}
 			</div>
 			<div className="searchItem">
-				<Link href={'/hotels'}><a><Button type="search" text="Search" /></a></Link>
+				<Link href={'/hotels'}><a><Button onClick={handleSearch} type="search" text="Search" /></a></Link>
 			</div>
 		</div>
 	)
