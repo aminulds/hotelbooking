@@ -9,10 +9,9 @@ import { DateRange } from 'react-date-range';
 import 'react-date-range/dist/styles.css';
 import 'react-date-range/dist/theme/default.css';
 import Button from '../../components/UI/Button';
-import HotelItem from '../../components/hotelItem/HotelItem';
 import Subscriber from '../../components/subscriber/Subscriber';
 import Footer from '../../components/footer/Footer';
-import { hotelData } from './hotelData';
+import SearchResult from '../../components/hotelItem/SearchResult';
 
 
 const Hotels = () => {
@@ -83,12 +82,7 @@ const Hotels = () => {
             </div>
 
             <div className="col-md-8">
-              <div className="serachResult">
-                {hotelData.map((item) => (
-                  <HotelItem key={item.title} img={item.img} title={item.title} rating={item.rating} charge={item.charge} />
-                ))}
-
-              </div>
+              <SearchResult />
             </div>
           </div>
         </div>
