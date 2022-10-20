@@ -10,9 +10,9 @@ import 'react-date-range/dist/styles.css';
 import 'react-date-range/dist/theme/default.css';
 import Button from '../../components/UI/Button';
 import HotelItem from '../../components/hotelItem/HotelItem';
-import { hotelData } from './hotelData';
 import Subscriber from '../../components/subscriber/Subscriber';
 import Footer from '../../components/footer/Footer';
+import { hotelData } from './hotelData';
 
 
 const Hotels = () => {
