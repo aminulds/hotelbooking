@@ -1,5 +1,4 @@
 
-// import Header from '../../components/header/Header';
 import TopNav from '../../components/header/TopNav';
 import Navbar from '../../components/header/Navbar';
 import { format } from 'date-fns';
@@ -10,6 +9,10 @@ import { DateRange } from 'react-date-range';
 import 'react-date-range/dist/styles.css';
 import 'react-date-range/dist/theme/default.css';
 import Button from '../../components/UI/Button';
+import HotelItem from '../../components/hotelItem/HotelItem';
+import { hotelData } from './hotelData';
+import Subscriber from '../../components/subscriber/Subscriber';
+import Footer from '../../components/footer/Footer';
 
 
 const Hotels = () => {
@@ -51,23 +54,23 @@ const Hotels = () => {
                   </div>
                   <div className='mb-3'>
                     <label>Options</label>
-                    <div className="optionItem mb-3 d-flex flex-column">
+                    <div className="optItem mb-3 d-flex flex-column">
                       <label>Min Price per night </label>
                       <input type="number" className='form-control mt-1' placeholder='' />
                     </div>
-                    <div className="optionItem mb-3 d-flex flex-column">
+                    <div className="optItem mb-3 d-flex flex-column">
                       <label>Max Price per night </label>
                       <input type="number" className='form-control mt-1' placeholder='' />
                     </div>
-                    <div className="optionItem mb-3 d-flex">
+                    <div className="optItem mb-3 d-flex">
                       <label>Adult </label>
                       <input min={1} type="number" className='form-control' placeholder={option.adult} />
                     </div>
-                    <div className="optionItem mb-3 d-flex">
+                    <div className="optItem mb-3 d-flex">
                       <label>Children </label>
                       <input min={0} type="number" className='form-control' placeholder={option.children} />
                     </div>
-                    <div className="optionItem d-flex">
+                    <div className="optItem d-flex">
                       <label>Room </label>
                       <input min={1} type="number" className='form-control' placeholder={option.room} />
                     </div>
@@ -81,13 +84,19 @@ const Hotels = () => {
 
             <div className="col-md-8">
               <div className="serachResult">
-                <h5>hjldgdd</h5>
+                {hotelData.map((item) => (
+                  <HotelItem key={item.title} img={item.img} title={item.title} rating={item.rating} charge={item.charge} />
+                ))}
+
               </div>
             </div>
           </div>
         </div>
 
       </section>
+
+      <Subscriber />
+      <Footer />
     </>
   )
 }
