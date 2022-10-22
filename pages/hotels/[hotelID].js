@@ -3,6 +3,7 @@ import Header from "../../components/header/Header";
 import Subscriber from '../../components/subscriber/Subscriber';
 import Footer from '../../components/footer/Footer';
 import Button from '../../components/UI/Button';
+import Image from 'next/image';
 
 const HotelDetails = () => {
 
@@ -47,11 +48,12 @@ const HotelDetails = () => {
           <div className="hotelImages">
             {photos.map((photo, i) => (
               <div className="hotelImgWrapper" key={i}>
-                <img
+                <Image src={photo.src} className="hotelImg" width={1280} height={853} />
+                {/* <img
                   src={photo.src}
                   alt=""
                   className="hotelImg"
-                />
+                /> */}
               </div>
             ))}
           </div>
