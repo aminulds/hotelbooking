@@ -56,15 +56,7 @@ const HotelDetails = () => {
             <div className="hotelDetailsTexts">
               <h2 className="hotelTitle">Stay in the heart of City</h2>
               <p className="hotelDesc">
-                Located a 5-minute walk from St. Florian's Gate in Krakow, Tower
-                Street Apartments has accommodations with air conditioning and
-                free WiFi. The units come with hardwood floors and feature a
-                fully equipped kitchenette with a microwave, a flat-screen TV,
-                and a private bathroom with shower and a hairdryer. Popular points of interest near the apartment include
-                Cloth Hall, Main Market Square and Town Hall Tower. The nearest
-                airport is John Paul II International KrakówBalice, 16.1 km
-                from Tower Street Apartments, and the property offers a paid
-                airport shuttle service.
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae doloremque cupiditate atque corporis animi debitis nesciunt! Incidunt sunt quam tempore!
               </p>
             </div>
             <div className="hotelDetailsPrice">
