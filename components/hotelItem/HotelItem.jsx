@@ -1,15 +1,16 @@
+import Link from "next/link";
+import Image from "next/image";
 import Button from "../UI/Button";
 
-const HotelItem = ({ img, title, rating, charge }) => {
+const HotelItem = ({ img, title, slug, rating, charge }) => {
   return (
     <div className="hotelItem">
-      <img
-        src={img}
-        alt={title}
-        className="siImg"
-      />
+      <Link href={`/hotels/${slug}`} >
+        <a><Image src={img} alt={title} className="siImg" width={200} height={200} /></a>
+      </Link>
       <div className="siDesc">
-        <h1 className="siTitle">{title}</h1>
+        <Link href={`/hotels/${slug}`}><a className="text-decoration-none"><h1 className="siTitle">{title}</h1></a></Link>
+
         <span className="siDistance">500m from center</span>
         <span className="siTaxiOp p-2 bg-warning text-dark">Free airport taxi</span>
         <span className="siSubtitle">
