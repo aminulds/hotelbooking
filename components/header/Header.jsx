@@ -3,18 +3,15 @@ import Navbar from './Navbar';
 import SearchFilter from './SearchFilter';
 import TopNav from './TopNav';
 
-import { useStateContext } from '../../context/ContextProvider';
 
-
-const Header = () => {
-	const { filterSearch, setFilterSearch, } = useStateContext();
+const Header = ({ isHeaderSearch }) => {
 
 	return (
 		<header className='header'>
 			<div className="container">
 				<TopNav />
 				<Navbar />
-				{filterSearch &&
+				{isHeaderSearch === 'true' &&
 					<>
 						<div className="header-description">
 							<h2 className='title'>Find Your Next Stay</h2>

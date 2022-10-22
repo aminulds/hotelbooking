@@ -12,6 +12,7 @@ import Button from '../../components/UI/Button';
 import Subscriber from '../../components/subscriber/Subscriber';
 import Footer from '../../components/footer/Footer';
 import SearchResult from '../../components/hotelItem/SearchResult';
+import Header from '../../components/header/Header';
 
 
 const Hotels = () => {
@@ -20,12 +21,13 @@ const Hotels = () => {
 
   return (
     <>
-      <header className='header'>
+      {/* <header className='header'>
         <div className="container">
           <TopNav />
           <Navbar />
         </div>
-      </header>
+      </header> */}
+      <Header isHeaderSearch='false' />
 
       <section className='hotels'>
         <div className="container">

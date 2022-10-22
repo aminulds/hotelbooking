@@ -9,7 +9,7 @@ import Subscriber from '../components/subscriber/Subscriber';
 const Home = () => {
   return (
     <>
-      <Header />
+      <Header isHeaderSearch='true' />
       <Offer />
       <PropertyCategory />
       <PropertyCountry />
