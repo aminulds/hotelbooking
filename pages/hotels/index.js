@@ -1,6 +1,4 @@
 
-import TopNav from '../../components/header/TopNav';
-import Navbar from '../../components/header/Navbar';
 import { format } from 'date-fns';
 
 import { useStateContext } from '../../context/ContextProvider';
@@ -21,12 +19,6 @@ const Hotels = () => {
 
   return (
     <>
-      {/* <header className='header'>
-        <div className="container">
-          <TopNav />
-          <Navbar />
-        </div>
-      </header> */}
       <Header isHeaderSearch='false' />
 
       <section className='hotels'>
@@ -97,4 +89,4 @@ const Hotels = () => {
   )
 }
 
-export default Hotels
+export default Hotels;
