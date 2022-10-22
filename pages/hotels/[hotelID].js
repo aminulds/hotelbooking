@@ -1,16 +1,10 @@
-
-import { BsArrowLeftCircleFill, BsArrowRightCircleFill } from 'react-icons/bs';
-import { HiOutlineXMark, HiLocationMarker } from 'react-icons/hi';
-
-import { useState } from "react";
+import { HiLocationMarker } from 'react-icons/hi';
 import Header from "../../components/header/Header";
 import Subscriber from '../../components/subscriber/Subscriber';
 import Footer from '../../components/footer/Footer';
 import Button from '../../components/UI/Button';
 
 const HotelDetails = () => {
-  const [slideNumber, setSlideNumber] = useState(0);
-  const [open, setOpen] = useState(false);
 
   const photos = [
     {
@@ -33,48 +27,12 @@ const HotelDetails = () => {
     },
   ];
 
-  const handleOpen = (i) => {
-    setSlideNumber(i);
-    setOpen(true);
-  };
-
-  const handleMove = (direction) => {
-    let newSlideNumber;
-
-    if (direction === "l") {
-      newSlideNumber = slideNumber === 0 ? 5 : slideNumber - 1;
-    } else {
-      newSlideNumber = slideNumber === 5 ? 0 : slideNumber + 1;
-    }
-
-    setSlideNumber(newSlideNumber)
-  };
 
   return (
-    <div>
+    <>
       <Header isHeaderSearch='false' />
       <div className="hotelContainer">
-        {open && (
-          <div className="slider">
-            <HiOutlineXMark
-              className="close"
-              onClick={() => setOpen(false)}
-            />
-            <BsArrowLeftCircleFill
-              className="arrow"
-              onClick={() => handleMove("l")}
-            />
-            <div className="sliderWrapper">
-              <img src={photos[slideNumber].src} alt="" className="sliderImg" />
-            </div>
-            <BsArrowRightCircleFill
-              className='arrow'
-              onClick={() => handleMove("r")}
-            />
-          </div>
-        )}
         <div className="hotelWrapper">
-
           <h1 className="hotelTitle">Tower Street Apartments <Button text='Reserve or Book Now!' /></h1>
           <div className="hotelAddress">
             <HiLocationMarker />
@@ -90,7 +48,6 @@ const HotelDetails = () => {
             {photos.map((photo, i) => (
               <div className="hotelImgWrapper" key={i}>
                 <img
-                  onClick={() => handleOpen(i)}
                   src={photo.src}
                   alt=""
                   className="hotelImg"
@@ -132,7 +89,7 @@ const HotelDetails = () => {
 
       <Subscriber />
       <Footer />
-    </div>
+    </>
   );
 };
 
